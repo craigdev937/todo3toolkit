@@ -2,5 +2,9 @@ body {
     background-color: steelblue;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 

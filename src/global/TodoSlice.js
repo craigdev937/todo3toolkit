@@ -4,17 +4,19 @@ import { API } from "./FetchAPI";
 const initialState = {
     todos: [],
     loading: false,
-    error: null
+    isError: null
 };
 
 const TodoSlice = createSlice({
     name: "todos",
     initialState: initialState,
-    reducers: {},
+    reducers: {
+        reset: (state) => initialState
+    },
     extraReducers: {
         [API.FetchAll.rejected]: (state, action) => {
             state.loading = false,
-            state.error = action.payload
+            state.isError = action.payload
         },
         [API.FetchAll.pending]: (state) => {
             state.loading = true
@@ -25,7 +27,7 @@ const TodoSlice = createSlice({
         },
         [API.Create.rejected]: (state, action) => {
             state.loading = false,
-            state.error = action.payload
+            state.isError = action.payload
         },
         [API.Create.pending]: (state) => {
             state.loading = true
@@ -36,7 +38,7 @@ const TodoSlice = createSlice({
         },
         [API.Update.rejected]: (state, action) => {
             state.loading = false,
-            state.error = action.payload
+            state.isError = action.payload
         },
         [API.Update.pending]: (state) => {
             state.loading = true
@@ -52,7 +54,7 @@ const TodoSlice = createSlice({
         },
         [API.Delete.rejected]: (state, action) => {
             state.loading = false,
-            state.error = action.payload
+            state.isError = action.payload
         },
         [API.Delete.pending]: (state) => {
             state.loading = true
@@ -65,6 +67,7 @@ const TodoSlice = createSlice({
     },
 });
 
+export const { reset } = TodoSlice.actions;
 export const TodoReducer = TodoSlice.reducer;
 
 

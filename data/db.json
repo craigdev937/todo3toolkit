@@ -1,21 +1,17 @@
 {
-    "todos": [
-        {
-            "title": "The UFO!",
-            "description": "Kola, a boy who's life is about to change.",
-            "id": 1
-        },
-        {
-            "title": "The Professor",
-            "description": "Henry Quartermain is actually a young college professor.",
-            "id": 2
-        },
-        {
-            "title": "The Mage",
-            "description": "Elizabeth Tang is a young magician.",
-            "id": 3
-        }
-    ]
+  "todos": [
+    {
+      "title": "The Professor",
+      "description": "Henry Quartermain is actually a young college professor.",
+      "id": 2
+    },
+    {
+      "description": "Kola Franklin, a boy who can Fly!",
+      "id": 3
+    },
+    {
+      "description": "Sally Fields was in Forrest Gump.",
+      "id": 4
+    }
+  ]
 }
-
-

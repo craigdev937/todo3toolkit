@@ -34,7 +34,7 @@ const TodoSlice = createSlice({
         },
         [API.Create.fulfilled]: (state, action) => {
             state.loading = false,
-            state.todos = [...action.payload]
+            state.todos.push(action.payload)
         },
         [API.Update.rejected]: (state, action) => {
             state.loading = false,

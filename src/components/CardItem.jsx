@@ -26,10 +26,7 @@ export const CardItem = ({ todo }) => {
                         text-gray-800 
                         dark:text-gray-100 
                         font-bold mb-3">
-                    {/* {todo.name.charAt(0).toUpperCase() + 
-                        todo.name.slice(1)} */}
-                    {todo.title.charAt(0).toUpperCase() + 
-                        todo.title.slice(1)}
+                    {todo.title}
                 </h4>
                 <p className="
                         text-gray-800
@@ -50,10 +47,6 @@ export const CardItem = ({ todo }) => {
                         justify-between 
                         text-gray-800
                         dark:text-gray-100">
-                    {/* <p className="text-sm">
-                        {" "}
-                        {new Date(todo.createdAt).toLocaleString("en-US")}
-                    </p> */}
                     <section className="flex space-x-4">
                         <button 
                             className="w-8 h-8 
